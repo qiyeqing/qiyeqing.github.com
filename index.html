@@ -6,9 +6,7 @@
     <title>齐叶青个人简历</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/remodal.css">
-
 </head>
-
 <body>
     <div class="container" id="cv">
         <div class="side">
@@ -71,7 +69,8 @@
                 <hr>
                 <ul class="stack-list">
                     <li>
-                        <label class="left-label">前端</label><span class="label-value">html5 css3 javascript vue  react </span>
+                        <label class="left-label">前端</label><span class="label-value">html5 css3 javascript vue react
+                        </span>
                     </li>
                     </li>
                     <li>
@@ -83,7 +82,6 @@
                     </li>
                 </ul>
             </div>
-
             <div class="code info-unit">
                 <h2 class="info-header"><i class="iconfont icon-build"></i> <span class="info-title">个人微信</span></h2>
                 <hr>
@@ -91,7 +89,6 @@
                     <img src=".//img/wechat.png" alt="">
                 </div>
             </div>
-
         </div>
         <div class="main">
             <div class="education info-unit right-list">
@@ -171,7 +168,7 @@
                             2. 函数独立出来封装，使之能更简洁友好<br>
                             3. 复用性高的组件抽离出来,使后期维护更友好<br>
                             4. 适配不同浏览器的渲染方式<br>
-                           
+
                         </p>
                     </li>
                     <li>
@@ -179,19 +176,19 @@
                         <p>
                             <b font-size="small">项目描述：</b><br>
                             电商网站，业务是玻璃的线上销售，涉及板块：商品版块、用户版块、商家版块、 物流版块、借贷版块。。.整合到一起的网站 <br>
-                         
+
                             <br>
                             <b font-size="small">责任描述：</b><br>
                             1. 页面整合了用户模块和商家模块的开发<br>
                             2. 手机端对接微信支付,适配安卓和ios<br>
-                            3. 适配手机的分辨率显示                
+                            3. 适配手机的分辨率显示
                         </p>
                     </li>
                     <li>
                         <h3> 2019.4-2019-11 | 打造索尼社区 </h3>
                         <p>
                             <b font-size="small">项目描述：</b><br>
-                             承接索尼的mysony club版块开发 (pc+移动端)<br>
+                            承接索尼的mysony club版块开发 (pc+移动端)<br>
                             <b font-size="small">责任描述：</b><br>
                             1. 由于pc前期是react开发,顺带也学习和修改了几个月的react代码<br>
                             2. 独自完成移动端和对接微信的开发<br>
@@ -199,7 +196,7 @@
                             4. 对接sony自己的接口,proxy的代理跨域设置<br>
                             <b font-size="small">项目地址：</b><br>
                             <a href="https://www.sonystyle.com.cn/mysony/bbs/web/">索尼(pc)</a> <br>
-                            <a href="https://www.sonystyle.com.cn/mysony/bbs/wap/">索尼(移动端)</a><br>                     
+                            <a href="https://www.sonystyle.com.cn/mysony/bbs/wap/">索尼(移动端)</a><br>
                         </p>
                     </li>
                 </ul>
@@ -207,7 +204,7 @@
             <div class="aboutme info-unit right-paragraph">
                 <h2 class="info-header"><i class="iconfont icon-flower"></i> <span class="info-title">自我评价</span></h2>
                 <hr>
-                <p>
+                <p id="name">
                     我是一个乐观和积极的人，平时的工作从不捻轻怕重。工作负责，热爱IT行业，待人真诚。为人礼貌，低调做人。
                     勤勉务实，注重理论与实践结合；进取意识强烈，虚心好学；能承担较强的工作压力。善于动手和理论知识
                     学习总结。
@@ -215,6 +212,19 @@
             </div>
         </div>
     </div>
+    <script>
+        var index = 0;
+        var str =
+            ' 我是一个乐观和积极的人，平时的工作从不捻轻怕重。工作负责，热爱IT行业，待人真诚。为人礼貌，低调做人。 勤勉务实，注重理论与实践结合；进取意识强烈，虚心好学；能承担较强的工作压力。善于动手和理论知识 学习总结!'
+
+        function type() {
+            if ((index - 1) == str.length) {
+                return clearInterval(arguments.callee)
+            }
+            document.getElementById("name").innerText = str.substring(0, index++);
+        }
+        setInterval(type, 100);
+    </script>
 </body>
 
 </html>
